@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Results</title>
+</head>
+<body>
+<table border=1>
+	<tr>
+		<th>School</th>
+		<th>Name</th>
+		<th>Department</th>
+		<th>Contact</th>
+		<th>Address</th>
+	</tr>
+	{% for tup in cursor %}
+		<tr>
+		{% for item in tup %}
+		<td>{{item}}</td>
+		{% endfor %}
+		</tr>
+	{% endfor %}
+</table>
+</body>
+</html>
